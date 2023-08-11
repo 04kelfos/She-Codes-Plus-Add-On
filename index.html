@@ -8,12 +8,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
   </head>
   <body>
-    <select name="citySelctor" id="citySelctor">
+    <select name="citySelctor" id="city-selctor">
       <option value="">Select a City...</option>
-      <option value="toyko" id="toyko">Tokyo 🇯🇵</option>
-      <option value="sydney" id="sydney">Sydney 🇦🇺</option>
-      <option value="paris" id="paris">Paris 🇫🇷</option>
+      <option value="Asia/Tokyo" id="toyko">Tokyo 🇯🇵</option>
+      <option value="Australia/Sydney" id="sydney">Sydney 🇦🇺</option>
+      <option value="Europe/Paris" id="paris">Paris 🇫🇷</option>
     </select>
-    <script></script>
+    <script>
+      function showDate(event) {
+        if (event.target.value.length > 0) {
+          let currentTime = moment()
+            .tz(event.target.value)
+            .format("ddd,MMMM D, YYYY HH:mm A");
+
+          alert(`It is ${currentTime} in ${event.target.value}`);
+        }
+      }
+
+      let citySelector = document.querySelector("#city-selector");
+      citySelector.addEventListener("change", showDate);
+    </script>
   </body>
 </html>
