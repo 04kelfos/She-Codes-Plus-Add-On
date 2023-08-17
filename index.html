@@ -7,11 +7,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="main-wrapper">
       <div class="clock-wrapper">
-        <h1>World Clock</h1>
+        <h1 class="title">World Clock</h1>
         <select name="" id="">
           <option value="choose">Choose a city...</option>
           <option value="current-location">My Current Location</option>
@@ -20,18 +32,29 @@
           <option value="sydney">Sydney</option>
           <option value="new-york">New York</option>
         </select>
-        <div class="city">London</div>
-        <div class="date">August 15th 2023</div>
-        <div class="time">18:24:00</div>
-        <div class="city">Tokyo</div>
-        <div class="date">August 15th 2023</div>
-        <div class="time">18:24:00</div>
+        <div class="city">
+          <div>
+            <h2>London</h2>
+            <div class="date">August 15th 2023</div>
+          </div>
+          <div class="time">18:24:00</div>
+        </div>
+        <div class="city">
+          <div>
+            <h2>London</h2>
+            <div class="date">August 15th 2023</div>
+          </div>
+          <div class="time">18:24:00</div>
+        </div>
       </div>
+    </div>
+    <p class="text-center">
       <small
-        >This project was coded by Kelsey Foster and is open-sourced on
+        >This project was coded by <strong>Kelsey Foster</strong> and is
+        open-sourced on
         <a href="https://github.com/04kelfos/She-Codes-Plus-Add-On">GitHub</a>
       </small>
-    </div>
+    </p>
     <script src="src/app.js"></script>
   </body>
 </html>
